@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+  <head>
+  </head>
+  <body>
+    <p>Welcome to the nginx page in a docker container !!!</p>
+
+    <p>Current Date and Time is: <span id='date-time'></span></p>
+
+    <script>
+        var dateAndTime = new Date();
+        document.getElementById('date-time').innerHTML=dateAndTime.toLocaleString();
+        </script>
+
+    <p>This Nginx docker container has been created by Matias Machado</p>
+    <p>This container image was created at (UTC):</p>
+    
+    </body>
+</html>

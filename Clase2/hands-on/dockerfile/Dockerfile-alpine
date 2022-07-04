@@ -1,0 +1,8 @@
+FROM alpine:3
+
+RUN apk update && apk add curl
+
+WORKDIR /app
+COPY ./run.sh .
+RUN chmod +x run.sh
+CMD [ "/app/run.sh" ]
