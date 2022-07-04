@@ -1,0 +1,4 @@
+Django==4.0.1
+djangorestframework==3.13.1
+psycopg2==2.9.0
+tzdata==2022.1

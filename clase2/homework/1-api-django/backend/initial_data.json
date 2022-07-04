@@ -1,0 +1,23 @@
+[
+    {
+        "model": "api.recordatorio",
+        "pk": 1,
+        "fields": {
+            "detalle": "recoge a Bart"
+        }
+    },
+    {
+        "model": "api.recordatorio",
+        "pk": 2,
+        "fields": {
+            "detalle": "Lisa necesita frenos"
+        }
+    },
+    {
+        "model": "api.recordatorio",
+        "pk": 3,
+        "fields": {
+            "detalle": "Deja de ver tanto los simpsons"
+        }
+    }
+]
