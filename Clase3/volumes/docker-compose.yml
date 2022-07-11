@@ -1,0 +1,26 @@
+version: "3.5"
+
+services:
+
+  #docker build . -t docker-compose_app:latest
+  #docker run -d --name api -p 5000:5050 --restart always docker-compose_app:latest
+  api:
+    build: .
+    restart: always    
+    ports:
+      - 5000:5000
+    volumes:
+      - ./templates:/app/templates
+      - ./static:/app/static
+
+  #docker run -d --name redis --network-alias redis redis:alpine
+  redis:
+    image: "redis:alpine"
+
+  #docker run -d --name redis -p 8081:8081 -e REDIS_HOSTS=local:redis:6379 rediscommander/redis-commander:latest
+  redis-commander:
+    image: rediscommander/redis-commander:latest
+    environment:
+      - REDIS_HOSTS=local:redis:6379
+    ports:
+      - 8081:8081
